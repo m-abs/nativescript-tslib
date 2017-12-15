@@ -1,0 +1,26 @@
+{
+  "name": "nativescript-tslib",
+  "version": "1.8.1-beta.1",
+  "description": "",
+  "main": "dist/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-abs/nativescript-tslib.git"
+  },
+  "author": "Morten Sjøgren <m_abs@mabs.dk>",
+  "license": "git@github.com:m-abs/nativescript-tslib.git",
+  "bugs": {
+    "url": "https://github.com/m-abs/nativescript-tslib/issues"
+  },
+  "homepage": "https://github.com/m-abs/nativescript-tslib#readme",
+  "dependencies": {
+    "tslib": "^1.8.1"
+  },
+  "devDependencies": {
+    "tns-core-modules": "^3.3.0",
+    "typescript": "^2.3.4"
+  }
+}
