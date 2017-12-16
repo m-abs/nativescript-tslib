@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "removeComments": true,
     "module": "commonjs",
     "target": "es5",
     "experimentalDecorators": true,

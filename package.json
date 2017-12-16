@@ -4,6 +4,9 @@
   "description": "",
   "main": "dist/index",
   "scripts": {
+    "rm:dist": "rimraf dist",
+    "build": "tsc",
+    "prepublish": "npm-run-all rm:dist build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,9 +20,11 @@
   },
   "homepage": "https://github.com/m-abs/nativescript-tslib#readme",
   "dependencies": {
-    "tslib": "^1.8.1"
+    "tslib": "~1.8.1"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2",
     "tns-core-modules": "^3.3.0",
     "typescript": "^2.3.4"
   }
