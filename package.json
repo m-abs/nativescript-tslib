@@ -1,6 +1,6 @@
 {
   "name": "nativescript-tslib",
-  "version": "1.8.1-beta.2",
+  "version": "1.8.1-beta.3",
   "description": "Add support for tslib helpers in NativeScript projects",
   "main": "dist/index",
   "nativescript": {
@@ -16,16 +16,20 @@
     }
   },
   "scripts": {
-    "rm:dist": "rimraf dist",
+    "clean": "rimraf dist",
     "build": "tsc",
-    "prepublish": "npm-run-all rm:dist build"
+    "prepublish": "npm-run-all clean build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/m-abs/nativescript-tslib.git"
   },
-  "author": "Morten Sjøgren <m_abs@mabs.dk>",
-  "license": "git@github.com:m-abs/nativescript-tslib.git",
+  "author": {
+    "name": "Morten Sjøgren",
+    "email": "m_abs@mabs.dk",
+    "url": "https://mabs.dk"
+  },
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/m-abs/nativescript-tslib/issues"
   },
@@ -37,6 +41,6 @@
     "npm-run-all": "^4.1.2",
     "rimraf": "^2.6.2",
     "tns-core-modules": "^3.3.0",
-    "typescript": "^2.3.4"
+    "typescript": "~2.5.0"
   }
 }
