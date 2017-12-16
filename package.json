@@ -1,13 +1,24 @@
 {
   "name": "nativescript-tslib",
-  "version": "1.8.1-beta.1",
-  "description": "",
+  "version": "1.8.1-beta.2",
+  "description": "Add support for tslib helpers in NativeScript projects",
   "main": "dist/index",
+  "nativescript": {
+    "platforms": {
+      "ios": "3.3.0",
+      "android": "3.3.0"
+    },
+    "plugin": {
+      "nan": "true",
+      "pan": "true",
+      "core3": "true",
+      "category": "Utilities"
+    }
+  },
   "scripts": {
     "rm:dist": "rimraf dist",
     "build": "tsc",
-    "prepublish": "npm-run-all rm:dist build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm-run-all rm:dist build"
   },
   "repository": {
     "type": "git",

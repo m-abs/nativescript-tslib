@@ -1,16 +1,19 @@
 # Using importHelpers and tslib with NativeScript
 
-(tslib)[https://www.npmjs.com/package/tslib] is a small runtime library for TypeScript that contains all of the TypeScript helper functions.
+[tslib](https://www.npmjs.com/package/tslib) is a small runtime library for TypeScript that contains all of the TypeScript helper functions.
+
 Unfortunately `tslib`'s `__extend`-function breaks NativeScript-projects by replacing NativeScript's version of the function.
 
-To workaround that issue, you can use this module (or you can target es6 in your `tsconfig.json`).
+To workaround that issue, you can use this module.
+
+## Usage
 
 ***Install module***
 ```bash
 npm i --save nativescript-tslib
 ```
 
-***app/main.ts***
+***Edit: app/main.ts***
 ```typescript
 import 'nativescript-tslib';
 
@@ -25,3 +28,9 @@ import { AppModule } from './app.module';
 // that sets up a NativeScript application and can bootstrap the Angular framework.
 platformNativeScriptDynamic().bootstrapModule(AppModule);
 ```
+
+You can enable `importHelpers` in tsconfig.json, but it shouldn't be needed.
+
+## Alternative
+
+You can set `tsconfig.json` target to es6, but when you can't extend native classes in your project.
