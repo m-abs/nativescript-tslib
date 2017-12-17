@@ -1,15 +1,38 @@
 declare const global: any;
 import 'tns-core-modules/globals'
 
-// Keep a local copy of the functions
-const fns = {
-  __extends: global.__extends,
-  __decorate: global.__decorate,
-};
+if (global.__native) {
+  Object.defineProperty(global, '__native', {
+    value: global.__native,
+  });
+}
+
+Object.defineProperty(global, '__extends', {
+  value: global.__extends,
+});
+
+Object.defineProperty(global, '__decorate', {
+  value: global.__decorate,
+});
 
 // import tslib to populate global with helpers
 import * as tslib from 'tslib';
 
-// Re-bind the nativescript-helpers to global
-Object.assign(global, fns);
-Object.assign(tslib, fns);
+// Replace tslib __extends and __decorate with nativescript versions
+Object.assign(tslib, {
+  __extends: global.__extends,
+  __decorate: global.__decorate,
+});
+
+// Bind the tslib helpers to global scope.
+// This is needed when we don't use importHelpers, which
+// breaks extending native-classes
+for (const fnName of Object.keys(tslib)) {
+  if (fnName === '__extends' || fnName === '__decorate') {
+    continue;
+  }
+
+  if (typeof tslib[fnName] === 'function') {
+    global[fnName] = tslib[fnName];
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "nativescript-tslib",
-  "version": "1.8.1-beta.3",
+  "version": "1.8.1-beta.4",
   "description": "Add support for tslib helpers in NativeScript projects",
   "main": "dist/index",
   "nativescript": {
