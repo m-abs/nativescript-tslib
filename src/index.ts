@@ -28,7 +28,8 @@ Object.assign(tslib, {
 // This is needed when we don't use importHelpers, which
 // breaks extending native-classes
 for (const fnName of Object.keys(tslib)) {
-  if (fnName === '__extends' || fnName === '__decorate') {
+  if (fnName in global) {
+    // Don't override globals __extends and __decorate again.
     continue;
   }
 
