@@ -1,6 +1,6 @@
 {
   "name": "nativescript-tslib",
-  "version": "1.9.1-beta.1",
+  "version": "1.9.1-r1",
   "description": "Add support for tslib helpers in NativeScript projects",
   "main": "dist/index",
   "nativescript": {
@@ -41,6 +41,6 @@
     "npm-run-all": "^4.1.2",
     "rimraf": "^2.6.2",
     "tns-core-modules": "^3.3.0",
-    "typescript": "~2.5.0"
+    "typescript": "~2.7.0"
   }
 }

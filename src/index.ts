@@ -18,12 +18,6 @@ Object.defineProperty(global, '__decorate', {
 // import tslib to populate global with helpers
 import * as tslib from 'tslib';
 
-// Replace tslib __extends and __decorate with nativescript versions
-Object.assign(tslib, {
-  __extends: global.__extends,
-  __decorate: global.__decorate,
-});
-
 // Bind the tslib helpers to global scope.
 // This is needed when we don't use importHelpers, which
 // breaks extending native-classes
